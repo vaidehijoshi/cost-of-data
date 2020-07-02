@@ -1,0 +1,118 @@
+@import url("https://rsms.me/inter/inter-ui.css");
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter UI", sans-serif;
+  text-align: center;
+  color: #FFFFFF;
+  background: linear-gradient(-180deg, #20BF55 0%, #01BAEF 100%);
+}
+
+.content-wrapper {
+  position: relative;
+  padding: 104px 0 24px 0;
+  width: 95%;
+  max-width: 600px;
+  margin: auto;
+}
+
+h1 {
+  display: block;
+  font-size: 80px;
+  margin: 0 0 24px 0;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 16vw;
+  }
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-style: italic;
+}
+
+a:hover {
+  color: #000000;
+}
+
+.title-heading {
+  font-weight: bolder;
+  color: #20BF55;
+  text-transform: uppercase;
+  padding: 0 16px;
+  background: #ffffff;
+}
+
+.section-heading {
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding: 0 16px;
+  margin: 75px 0 50px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  display: block;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 18px;
+  width: 100%;
+  padding: 16px 24px;
+  background: rgba(27, 48, 66, 0.8);
+  margin-bottom: 16px;
+}
+
+.transcript-text-wrapper {
+  text-align: justify;
+}
+
+.header {
+  margin-bottom: 104px;
+}
+
+.supplemental-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.supplemental-item {
+  font-style: normal;
+  font-weight: 500;
+}
+
+.resource-links,
+.transcript-container,
+.usage-instructions {
+  margin-top: 64px;
+}
+
+.footer {
+  margin-top: 224px;
+}
+
+.footer img {
+  height: 104px;
+  width: auto;
+}
+
+.footer a {
+  font-style: normal;
+}
