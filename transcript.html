@@ -48,12 +48,132 @@
           <span class="supplemental-item">📁 Slides</span>
         </a>
       </div>
-      
+
       <div class="transcript">
         <h3 class="section-heading">Talk Transcript</h3>
         <div class="transcript-text-wrapper">
           <p>
-            Coming soon!
+            Everything that we create and share on the internet is stored somewhere. However, most of us aren’t thinking about how and
+            where this data is stored. As developers, we may think that our data is ephemeral, but all of it lives somewhere. When we
+            work with code all day, it can be easy to forget about all of the physical things that are powering our world.
+          </p>
+          <p>
+            The majority of all data in computing is stored in a data center. A <strong>data center</strong> is one or many buildings that
+            store servers and all of the hardware associated with them. Before data centers were ubiquitous, we had to store our servers on our own,
+            sometimes in a room. But people found that data centers were easier to use than maintaining their own server rooms, and
+            they became much more common. And if you use a cloud provider, then you are using the data centers that they provide.
+          </p>
+          <p>
+            <strong>Cloud providers</strong> are companies that rent out servers in their data centers. Storing content in a cloud provider’s data center
+            is more efficient than running a data center of your own. You don’t have to maintain your own machines, or your own network.
+            You have access to better hardware and improved security infrastructure, like backups and distributed databases. When you sign
+            up to use a cloud provider, they will promise you little to no downtime. In other words, they say that they will keep things running.
+          </p>
+          <p>
+            But what do providers have to do in order to ensure operability, and no downtime? In order to make sure that you can always access your data
+            and in order to keep their systems reliable, they often have more than one instance of a server in different locations.
+            This is called redundancy. But the more servers you have, the more servers you need to power and maintain.
+            And servers are demanding! A server requires energy to be powered, which comes in the form of electricity.
+            But servers also use a lot of energy and emit it in the form of heat. If a server emits too much heat, it will overheat and fail.
+            So, the server also has to be cooled! Because of these hardware constraints, every data center has some mechanism to remove hot air and
+            supply cool air. So, not only do we need energy to power the servers, we need energy to cool them down, too.
+          </p>
+          <p>
+            But just how much energy are we talking about? By conservative estimates, data centers worldwide use approximately
+            200 terawatt hours (TWh) a year. One terawatt-hour is equivalent to a trillion watts of energy consumed in one hour.
+            For some perspective, Scotland has a population of over 5 million and requires only 25 TWh of electrical energy each year.
+            Overall, data centers currently demand somewhere between 1-3% of the world’s global electricity.
+          </p>
+          <p>
+            If data centers are using so much of the global electricity supply, it’s worth asking: where does the energy from? The electricity
+            to power data centers comes from the local power grid. Unfortunately, many data centers are relying on power grids that use fossil
+            fuels as their main power source. Fossil fuels emit greenhouse gasses into the atmosphere. Data suggests that the IT and communication
+            technology industry accounts for approximately 2% of greenhouse gas emissions. Out of this 2% of emissions, conservative estimates
+            suggest that data centers are responsible for at least 0.3% of that. Another way of thinking about this is that the tech sector has a
+            carbon footprint equivalent to the airline industry.
+          </p>
+          <p>
+            So what are the cloud providers are doing about this? Well, it depends a lot on the provider and their values. There’s a great white paper
+            that was published last year called <a href="https://docs.google.com/document/d/1eCCb3rgqtQxcRwLdTr0P_hCK_drIZrm1Dpb4dlPeG6M" target="_blank">
+            "The State of Data Center Energy Use in 2018"</a>. It was written by two folks in the industry, Paul Johnston and Anne Currie.
+            This paper goes into a lot of detail about the environmental impacts of six of the biggest cloud providers,
+            and it actually gives them a grade in terms of the sustainability of their servers! I’m only going to talk about two of these today, but
+            I encourage you to check out their entire white paper, it has some wonderful resources.
+          </p>
+          <p>
+            We’ll start with Amazon's cloud provider service, <strong>AWS</strong>, which is the largest cloud provider. They have a commitment to be 100% renewable by 2030.
+            Amazon allows you to store your server instances in different zones across the globe. They have 25 zones, but only 5 of them are carbon neutral.
+            If you store your data in a carbon neutral zone, AWS will purchase something called a "carbon offset". When AWS buys an offset, they are
+            purchasing renewable energy and putting it back into the electrical grid. These offsets are what makes these zones "carbon neutral".
+            It’s important to note that if you store your data in one of these zones, you’re still emitting greenhouse gasses. You’re just slowing down
+            your emissions by buying more renewable power generation from elsewhere. Offsets are not a long-term solution because they don’t remove carbon
+            emissions from the atmosphere, they just slow it down.
+          </p>
+          <p>
+            Even though AWS offers 5 carbon neutral regions, it also has regions like US-EAST-1, in Northern Virginia, in the United States. A lot of companies host
+            their data in this region. Unfortunately, Dominion Energy, the power supplier for this region, has doubled down on fossil fuels. As a result,
+            this means that all of the data centers in this state are contributing to carbon emissions, because the power supplier is the one deciding what
+            kind of energy source to use to power the electrical grid. And remember that goal that AWS had of being "100% renewable"? Well, despite this goal,
+            they are continuing to open new data centers in this region. Since 2017, they’ve actually increased their operations in US-East-1 by 59%.
+            On top of that, AWS is also not transparent about publicly reporting data on their current energy use, or how quickly their energy use is growing.
+            This makes it hard to know if the renewable energy that they are buying through carbon offsets is anywhere close to offsetting how much energy
+            they are actually using.
+          </p>
+          <p>
+            Now, if we take a look at <strong>Google</strong>, things get a bit brighter. The Google Cloud Platform buys carbon offsets for all of its servers.
+            Their parent company, Alphabet, is the largest corporate buyer of renewable energy. Compared to AWS, Google has been pretty transparent about the
+            fact that they actually can’t power 100% of their servers through entirely renewable energy! So, instead, they have adopted a different strategy.
+            For each kilowatt-hour of energy that their servers consume, Google purchases a matching kilowatt-hour of clean, renewable energy and adds it back
+            into the power grid. So, even though hosting on Google cloud causes new carbon emissions, 100% of those emissions is offset. Google is actually the
+            leader in this sector, and is doing better than most other cloud providers. Microsoft is the only other provider that has actually met its 100%
+            sustainability goal, which you can read about on the whitepaper.
+          </p>
+          <p>
+            Now that we know the reality of how these cloud providers are actually powering the data centers that house our content, the question is: how will the
+            energy usage of data centers scale into the future? Multiple research papers have found that global data traffic is actually growing quite quickly.
+            This means that the usage of data centers is going to grow, too. Over time, this will demand more energy. Here is the "expected case" projection for
+            how the IT industry will grow over time. The estimate is that our industry will use somewhere between 8-21% of the total global electricity demand by
+            the end of this decade. Given that we’re an industry that cares so much about efficiency and scalability, we need to start seriously thinking about this
+            problem. I have some good news though: some of us are!
+          </p>
+          <p>
+            People have started solving this problem. Some companies are building their new data centers in colder climates, where it doesn’t take as much energy to
+            cool servers. Others are recovering and recycling wasted heat from servers and re-using it in sustainable ways. Companies like Stripe and Basecamp,
+            which don’t even have data centers of their own, have dedicated themselves to becoming fully carbon-neutral or carbon negative.
+          </p>
+          <p>
+            Each of us has agency in solving this problem, too. We can find out where our data lives, and whether it is stored in a region that is green and carbon
+            neutral and powered by renewable energy, or whether is it contributing to the planet’s greenhouse gas emissions? There’s a great website called the
+            <a href="https://www.thegreenwebfoundation.org" target="_blank">Green Web Foundation</a> that can help you answer this question when it comes to your own projects,
+            as well as the apps that you might use every day. If your data doesn’t live in a green region, figure out what it would take to migrate your data to a
+            different location or provider that <em>is</em> carbon neutral.
+          </p>
+          <p>
+            If you’re in the lucky position to start fresh and are provisioning new servers or databases, you can choose a clean cloud provider from the get go.
+            Another great step you can take is to draw attention to this issue and talk about it with your team. If you’re at a small company, this might mean just
+            talking about your cloud provider choices internally. But if you work at a big company, especially one that has a large enterprise account, you can
+            pressure your cloud provider to release data and be transparent about where their energy comes from for powering their data centers.
+          </p>
+          <p>
+            And if you work at a company that provides cloud services, and if you have the power and the privilege to do so, you can do even more.
+            There are some very active employees at Amazon that are doing exactly this. You can even build something to make it easy for people to find
+            information about this topic.
+          </p>
+          <p>
+            It’s very hard to find data around energy consumption and these cloud providers, so it’s important to make this data accessible to everyone in the industry.
+            A great example of this is the <a href="https://chrome.google.com/webstore/detail/cloud-sustainability-cons/fmnjfjhemfjjbdnapfbnpefndheekmdb?hl=en" target="_blank">Cloud Sustainability Console chrome extension</a>.
+            It’s a simple but useful browser extension that highlights which regions in AWS are carbon neutral.
+            But, if you take nothing else away from this, I hope the one thing that you will all do is <strong>be aware</strong>.
+            Be aware of the physical impacts of what we do every day (even though we can’t always see them). Be aware of the impact that our industry is making on all
+            of us, and on our planet. Our industry relies upon a finite resource, even if we can’t see it or even if we don’t think about it all the time.
+            It’s our responsibility to take the first step and learn about this stuff. As I’ve learned more about how we store data, I’ve also realized that most of
+            us don’t even know what this information will cost us down the road. We don’t yet know what the cost of data will be to us, or our planet.
+          </p>
+          <p>
+            But despite this, I don’t feel entirely disheartened. It might seem like all we’re doing as an industry is contributing to the problem, but there’s
+            another way to look at it, too. We could be the ones who start to change it. Historically speaking, the field of technology has pushed the needle forward.
+            I’m optimistic that we can do it again here, too, and set an example for other industries. We are a unique group because we aren’t just consumers of
+            technology: we create it. Which means that we each have the power to influence and guide our industry, too. I hope to see all of us guide it in the right direction.
           </p>
         </div>
       </div>
