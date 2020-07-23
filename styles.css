@@ -88,6 +88,10 @@ li {
   text-align: justify;
 }
 
+.transcript-text-wrapper p {
+  padding: 10px 0;
+}
+
 .header {
   margin-bottom: 104px;
 }
